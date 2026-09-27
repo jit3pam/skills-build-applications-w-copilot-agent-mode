@@ -6,8 +6,8 @@ function formatValue(value) {
   return value
 }
 
-export default function CollectionView({ title, resource, columns }) {
-  const { items, loading, error, usingLocalApi } = useCollection(resource)
+export default function CollectionView({ title, resource, endpoint, columns }) {
+  const { items, loading, error, usingLocalApi } = useCollection(endpoint)
 
   return (
     <section aria-labelledby={`${resource}-heading`}>
